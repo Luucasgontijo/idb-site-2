@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const limite = 40;
     const token = process.env.API_KEY;
 
+    console.log(API_KEY)
+
+
 
     const baseURL = `https://graph.instagram.com/me/media?fields=${campos}&access_token=${token}&limit=${limite}`;
     
