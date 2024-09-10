@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const campos = "media_type,media_url,permalink";
     const limite = 40;
+    const token = process.env.API_KEY;
+
 
     const baseURL = `https://graph.instagram.com/me/media?fields=${campos}&access_token=${token}&limit=${limite}`;
     
@@ -76,17 +78,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     // Adicione a animação ao rolar a página
-    const tituloElements = document.querySelectorAll('.Idb_titulo');
-
-    function animateOnScroll() {
-        tituloElements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                element.classList.add('animate');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Chame uma vez para animar elementos visíveis na carga
+    
 });

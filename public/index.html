@@ -68,9 +68,21 @@
     
     <script type="text/javascript"> 
         
+        const tituloElements = document.querySelectorAll('.Idb_titulo');
 
-        const token = process.env.API_KEY;
-        console.log(token);
+        function animateOnScroll() {
+            tituloElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    element.classList.add('animate');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Chame uma vez para animar elementos visíveis na carga
+
+        
         
         let lastScrollTop = 0;
         const header = document.getElementById('header');
@@ -88,6 +100,8 @@
         }
 
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+
+
         });
     </script>
 </body>
