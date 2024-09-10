@@ -1,0 +1,9 @@
+.img-projects{
+    width: 80vh;
+}
+.box_2{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
