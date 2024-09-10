@@ -63,10 +63,14 @@
     </footer>
 
 
-
     <script src="js/carousel.js"></script>
     
     <script type="text/javascript"> 
+
+            
+        const token = process.env.API_KEY;
+        console.log(token);
+        
         let lastScrollTop = 0;
         const header = document.getElementById('header');
 
